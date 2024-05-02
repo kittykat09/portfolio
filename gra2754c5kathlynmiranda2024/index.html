@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<style type="text/css">
+wrapper {
+    width: 1366px;
+    height: 1024px;
+    display: block;
+    background-image: url(kitchen%20background.jpeg);
+    background-size: 100% auto;
+    margin: auto;
+    background-repeat: no-repeat;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div {
+    width: 335px;
+    border: 1px solid rgba(238,236,236,0.51);
+    height: 150px;
+    display: inline-block;
+    background-image: url(url);
+    text-align: center;
+}
+body {
+}
+h1 {
+    color: #9F8092;
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+    font-size: 50px;
+    text-align: center;
+}
+p {
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+    color: #000000;
+    text-align: center;
+}
+div img {
+    height: 100%;
+    width: auto;
+}
+main {
+    height: 636px;
+    min-width: 0px;
+    padding-top: 201px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+main div {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+#div5 {
+    margin-top: 184px;
+}
+#div6 {
+    margin-top: -260px;
+}
+</style>
+</head>
+<body>
+	<h1> LET'S MAKE CUPCAKES!</h1
+		><p>Drag and Drop to make and decorate cupcakes</p>
+	<wrapper>
+<main ondrop="drop(event)" ondragover="allowDrop(event)">
+<div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</main>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="white%20whipped%20cream.png" alt=""  id="drag1" draggable="true" ondragstart="drag(event)">
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="birthday.png" alt="" id="drag2" draggable="true" ondragstart="drag(event)"></div>
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="regular%20base.png" alt=""  id="drag3" draggable="true" ondragstart="drag(event)"></div>
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"><img src="choco%20base.png" alt=""  draggable="true" ondragstart="drag(event)" id="drag4"></div>
+</wrapper>	
+</body>
+<footer>© 2024, Kathlyn Miranda.
+This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</footer>	
+</html>
